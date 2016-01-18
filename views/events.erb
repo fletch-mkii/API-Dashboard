@@ -1,0 +1,14 @@
+<div class="small-6 small-offset-3 columns">
+  <div class="callout primary">
+    <h3>Today's Events</h3>
+    <p>
+      <%@all_events.each do |event|%>
+        <h5><li><%= event["title"] %></li></h5>
+        <li><%=event["venue"]["name"]%></li>
+        <li><%= event["datetime_local"][0..9]%></li>
+        <li><%=event["datetime_local"][11..-1]%></li>
+        <hr></hr>
+      <%end%>
+    </p>
+  </div>
+</div>
